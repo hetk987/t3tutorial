@@ -1,7 +1,6 @@
-import Link from "next/link";
 import { db } from "~/server/db";
 
-
+export const dynamic = "force-dynamic";
 const mcokURLs = [
   "https://utfs.io/f/b7eb508b-b2dc-452d-bcfe-135a8a986680-ueb5b5.jpg",
   "https://utfs.io/f/18ae7e45-520f-40b7-8be2-19ac124f6065-9mlv9c.webp",
