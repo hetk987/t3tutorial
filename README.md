@@ -6,7 +6,7 @@
 - [x] Scaffold basic ui with mock data
 - [x] Actually set up a database
 - [x] Attatch database to UI
-- [ ] Add authentication
+- [x] Add authentication
 - [ ] Add image upload
 - [ ] Error Management (w/ Sentry)
 - [ ] Routing/image page (parrallel route)
