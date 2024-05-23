@@ -3,6 +3,7 @@
 import { useRouter } from "next/navigation";
 import { useUploadThing } from "../utils/uploadthing";
 import { toast } from "sonner";
+import { useEffect } from "react";
 
 
 // inferred input off useUploadThing
@@ -33,9 +34,15 @@ const useUploadThingInputProps = (...args: Input) => {
 
 function UploadSVG() {
     return (
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="white" className="size-6">
             <path strokeLinecap="round" strokeLinejoin="round" d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5m-13.5-9L12 3m0 0 4.5 4.5M12 3v13.5" />
         </svg>
+    )
+}
+
+function UploadSVGSpiner() {
+    return (
+        <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="white"><circle className="spinner_S1WN" cx="4" cy="12" r="3" /><circle className="spinner_S1WN spinner_Km9P" cx="12" cy="12" r="3" /><circle className="spinner_S1WN spinner_JApP" cx="20" cy="12" r="3" /></svg>
     )
 }
 
@@ -49,12 +56,15 @@ export default function SimpleUploadButton() {
             router.refresh()
         },
         onUploadBegin() {
-            toast("Uploading...", {
+            toast(
+                <div className="flex gap-2 text-white">
+                    <UploadSVGSpiner /> Uploading...
+                </div>, {
                 duration: 100000,
                 id: "upload-begin",
                 invert: true
-            });
-        }
+            },);
+        },
     })
     return (
         <div>
