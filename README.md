@@ -9,7 +9,7 @@
 - [x] Add authentication
 - [x] Add image upload
 - [x] Error Management (w/ Sentry)
-- [ ] Routing/image page (parrallel route)
+- [x] Routing/image page (parrallel route)
 - [ ] Delete button (w/ Server Actions)
 - [ ] Analytics (posthog)
 - [ ] Ratelimiting (upstash)
