@@ -12,8 +12,9 @@ async function Images() {
       <div key={image.id} className="flex w-48 h-48 flex-col">
         <Link href={`/img/${image.id}`}>
           <Image
+            className="hover:bg-sky-500/50"
             src={image.url}
-            style={{ objectFit: "contain" }}
+            style={{ objectFit: "contain"}}
             width={192}
             height={192}
             alt={image.name} />
